@@ -1,0 +1,167 @@
+//Font-size
+.x-large{
+    font-size:4rem;
+    line-height: 1.2;
+    margin-bottom:1rem;
+}
+.large{
+    font-size:3rem;
+    line-height: 1.2;
+    margin-bottom:1rem;
+}
+.lead{
+    font-size:1.5rem;
+    margin-bottom: 1rem;
+}
+.small{
+    font-size:0.8rem;
+}
+
+.text-primary-blue{
+    color: $primary-color-blue;
+}
+.text-primary-red{
+    color: $primary-color-red;
+}
+
+.text-center{
+    text-align:center;
+}
+
+.bold{
+    font-weight:700;
+}
+
+.hidden{
+    visibility:hidden
+}
+
+//Alert
+.alert{
+    padding: 0.2rem;
+    margin: 1rem;
+    opacity:0.9;
+    background: $light-color;
+    color: #333;
+
+    &.alert-primary-red{
+        @include set-background($primary-color-red)
+    }
+    &.alert-primary-blue{
+        @include set-background($primary-color-blue)
+    }
+    &.alert-danger{
+        @include set-background($danger-color)
+    }
+    &.alert-success{
+        @include set-background($success-color)
+    }
+}
+
+
+//Container
+
+.container{
+    max-width: $max-width;
+    margin:auto;
+    overflow:hidden;
+    padding: 0 2rem;
+    margin-top:6rem;
+    margin-bottom:3rem;
+}
+//Backgrounds
+.bg {
+    &-light{
+        @include set-background($light-color);
+        border: 1px solid #ccc;
+    }
+    &-dark{
+        @include set-background($dark-color) ;
+    }
+    &-success{
+        @include set-background($success-color);
+    }
+    &-danger{
+        @include set-background($danger-color);
+    }
+    &-primary-red{
+        @include set-background($primary-color-red);
+    }
+    &-primary-blue{
+        @include set-background($primary-color-blue);
+    }
+    &-white{
+        @include set-background(#ffffff);
+    }
+}
+
+//buttons
+
+.btn{
+    display:inline-block;
+    background: $light-color;
+    color: #333;
+    padding: 0.4rem 1.2rem;
+    border:none;
+    cursor: pointer;
+    font-size:1rem;
+    margin-right:0.5rem;
+    outline:none;
+    border-radius:5px;
+    transition: all 0.2s ease-in;
+
+    &.btn-primary-red{
+        @include set-background($primary-color-red);
+
+        &:hover{
+            background: lighten($primary-color-red, 15%)
+        }
+    }
+    &.btn-primary-blue{
+        @include set-background($primary-color-blue);
+        &:hover{
+            background: lighten($primary-color-blue, 15%)
+        }
+    }
+    &.btn-success{
+        @include set-background($success-color);
+        &:hover{
+            background: lighten($success-color, 5%)
+            }
+        }
+    &.btn-danger{
+        @include set-background($danger-color);
+        &:hover{
+             background: lighten($danger-color, 5%)
+                }
+            }
+}
+
+
+//Links color
+.link-blue{
+    color: $primary-color-blue;
+    cursor: pointer;
+}
+.link-red{
+    color: $primary-color-red;
+    cursor: pointer;
+}
+.link-primary{
+    color: #333;
+    cursor: pointer;
+}
+
+
+.dark-overlay{
+    height:100%;
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    background: rgba(0,0,0,0.1)
+}
+
+.flex-1{
+    flex:1;
+}

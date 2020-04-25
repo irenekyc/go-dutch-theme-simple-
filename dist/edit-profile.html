@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="https://kit.fontawesome.com/a1e74affc8.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&display=swap" rel="stylesheet">
+    <title>Go-Dutch</title>
+</head>
+<body>
+    <nav class="navbar bg-white">
+        <h1> <i class="far fa-comment-dots"></i> Go-Dutch</h1>
+        <ul>
+            <li> <a href="profile.html">Profile </a></li>
+            <li> <a href="register.html">Register </a></li>
+            <li> <a href="login.html">Login </a></li>
+        </ul>
+    </nav>
+    <section class="container">
+        <h1 class="large"> Edit My Profile</h1>
+        <form action="dashboard.html" class="form">
+            <!-- Alert-->
+            <p class="alert alert-success"> Update done </p>
+          
+            <div class="form-group">
+                <input type="text" placeholder="Name" value="Irene">
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="email" value="testing@testing.com">
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="password" disabled="disable" value="12345678">
+                
+            </div>
+            <div class="form-group">
+                <input type="checkbox" class="hidden" id="changePW">
+                <label for="changePW" class="btn"> Change my password </label>
+                <div class="show-on-clicked bg-light my-1">
+                    <input type="password" placeholder="New Password" class="my-1">
+                    <input type="password" placeholder="Confirm new password" class=" my-1">
+                </div>
+                
+            </div>
+
+            <div class="form-group">
+                <input type="text" placeholder="Location" value="Hong Kong">
+            </div>
+     
+            <div class="form-group">
+                <input type="text" placeholder="Bio" value="Hi This is Irene">
+                <small class="py-1"> *Tell us a little about you</small>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary-red" value="Submit">
+            </div>
+        
+        </form>
+        
+    </section>
+
+ 
+    
+</body>
+</html>

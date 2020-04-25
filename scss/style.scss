@@ -1,0 +1,234 @@
+@import 'config';
+@import 'utilies';
+@import 'form';
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+a{
+    text-decoration:none;
+    color: $primary-color-blue;
+}
+
+ul{
+    list-style:none;
+}
+
+img{
+    width:100%;
+}
+
+i{
+    margin-right:0.3rem;
+    margin-left:0.3rem;
+}
+
+body{
+    font-family: 'Baloo Bhaina 2', cursive;
+    font-size:1rem;
+    line-height:1.5rem;
+    background: #fff;
+    color: #333;
+}
+
+//Nav Bar
+
+.navbar {
+    color: $primary-color-blue;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 2rem;
+    position:fixed;
+    z-index:1;
+    width:100%;
+    top:0;
+    left:0;
+    opacity:0.9;
+
+    ul{
+        display:flex;
+    }
+
+    a {
+        color: $primary-color-blue;
+        padding: 0.5rem;
+        margin: 0 0.5rem;
+    }
+
+
+}
+
+//Landing
+
+.landing{
+    position: relative;
+    background: url('../img/background.jpg') no-repeat center center/cover;
+    height:100vh;
+
+    &-inner{
+        color: #fff;
+        height:100%;
+        width:80%;
+        margin:auto;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align:center;
+    }
+}
+
+//Collections
+
+.collection{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2rem;
+    margin-bottom:1.2rem;
+}
+
+//Content card
+
+.content-card{
+    padding: 2rem;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    border-radius: 5px;
+}
+
+.main-content{
+    flex:1;
+    text-align: center;
+}
+
+//dashboard
+
+.dashboard-grid{
+    display:grid;
+    grid-gap: 1.5rem;
+    grid-template-areas: 'profile profile' 
+    'collections achievement';
+}
+
+.my-profile {
+    width:100%;
+    padding: 2rem;
+    text-align: center;
+    grid-area:profile;
+}
+.my-collections{
+    grid-area:collections;
+    padding: 2rem;
+
+    ul li{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #ccc;
+
+        &:hover .show-on-hover{
+            display:block;
+        }
+        .show-on-hover{
+            display:none;
+            transition: 1s;
+        }
+    }
+   
+    
+}
+
+.my-achievement{
+    grid-area: achievement;
+    padding: 2rem;
+}
+.fa-crown{
+    color: #ffc131;
+}
+
+
+//Edit Profile
+
+.show-on-clicked{
+    display:none;
+    padding: 1rem;
+    width:50%;
+}
+
+#changePW:checked ~.show-on-clicked{
+    display:block;
+
+}
+
+//Add Collection
+.btn-toggle{
+    position:relative;
+ 
+
+    &:before{
+        content: "";
+        width: 30px;
+        height: 30px;
+        background: white;
+        border-radius: 50%;
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:1;
+        cursor: pointer;
+        transition: 0.5s;
+        z-index:2;
+    }
+
+    &:after{
+        content:"";
+        position:absolute;
+        width:60px;
+        height:30px;
+        background: $primary-color-blue;
+        border-radius: 30px;
+        top:0;
+        left:0;
+        cursor: pointer;
+        z-index:1;
+    }
+}
+
+#authRequired:checked ~.btn-toggle:before{
+    transform: translateX(30px)
+}
+#authRequired:checked ~.btn-toggle:after{
+    transition-delay: 0.2s;
+    background: $primary-color-red;
+}
+input[type="checkbox"]{
+    visibility: hidden
+}
+
+
+.flex-group{
+    display: flex;
+    justify-content: space-between;
+
+    input[type="text"]{
+        width:200px;
+        padding: 10px;
+        height:30px;
+        font-size: 18px;
+        line-height: 30px;;
+        border-radius: 10px;
+        border: 1px solid $primary-color-blue;
+        outline: none;
+    }
+    input[type="text"]:nth-child(even){
+        border: 1px solid #333;
+    }
+}
+
+
+
